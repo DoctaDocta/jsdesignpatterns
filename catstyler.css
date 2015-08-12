@@ -1,5 +1,5 @@
 #game-window {
-	background-color: lightgrey;
+	background-color: blue;
 	height: 500px;
 	width: 500px;
 }
@@ -13,4 +13,9 @@
 
 #counter{
 	clear: right;
+	margin-right: auto;
+	margin-left: auto;
+	color: #00ff00;
+	text-transform: uppercase;
+
 }
