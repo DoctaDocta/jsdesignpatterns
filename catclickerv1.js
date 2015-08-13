@@ -1,17 +1,24 @@
 var count = 0;
-var cat_pic = $("#cat_pic");
+/*
 var catpic = $("#catpic");
 var counter = $("#counter");
-var scoreboard = $("#scoreboard");
 var span = $("#span");
 
-//alert(span);
+var cat1 = "Toby";
+var cat2 = "Chance the CATter"*/
+var cat1 = "Toby";
+
+var cat_names = $("#cat_names");
+var cat_pic = $("#cat_pic");
+var scoreboard = $("#scoreboard");
+var title_str = "Meet Toby and Chance the Scrapper!";
 
 
 if (scoreboard) {
 	console.log("scoreboard exists");
 }
-if (catpic){
+
+if (cat_pic){
 	console.log("catpic exists");
 	$(document).ready(function() {
 		$("#cat_pic").on("click", function() {
@@ -20,16 +27,8 @@ if (catpic){
 		});
 	});
 }
-/*
-var scoreKeeper = function() {
-	count++;
-	console.log("catpic clicked to function");
-	scoreboard.html("You have clicked the pussy" + count + "times, now. Stop it.");
-	return count;
-};*/
 
-
-	catpic.click(function(){
-		alert("your message");
-	    $("#scoreboard").text("Hello world!");
-	});
+if (cat_names) {
+	console.log("cat_names exist");
+	$(#cat_names).text(cat1);
+};
