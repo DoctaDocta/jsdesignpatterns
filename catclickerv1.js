@@ -1,8 +1,24 @@
+var count = 0;
+var catpic = $("#cat-picture");
+var scoreboard = $("#scoreboard");
 
-// cat clicker for Udacity's JS Design Patterns class.
+if (scoreboard) {
+	console.log("scoreboard exists");
+}
+if (catpic){
+	console.log("catpic exists");
+	catpic.click(scoreKeeper);
+}
 
-var catclicks = 0;
-var elem = document.getElementById('my-elem');
-elem.addEventListener('click', function(){
-	catclicks++;
-}, false);
+var scoreKeeper = function() {
+	count++;
+	console.log("catpic clicked to function");
+	scoreboard.text("You have clicked the pussy " + count + "times, now. Stop it.");
+	return count;
+};
+
+$("h3").text("the text has changed");
+
+$('#catpic').click(function(){
+    alert('your message');
+});

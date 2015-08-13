@@ -1,10 +1,10 @@
 #game-window {
-	background-color: blue;
+	background-color: lightgrey;
 	height: 500px;
 	width: 500px;
 }
 
-#cat-picture {
+#catpic {
 	height: 50px;
 	width: 70px;
 	margin-right: auto;
