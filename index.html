@@ -13,22 +13,18 @@
 
 <!-- Cats -->
 <h2 id="title">A wonderful cat-alogue</h2>
-<ul class="cat-list" data-bind="foreach: cats">
-    <li><input data-bind="value: name"/>
-    </li>
-</ul>
 
 <button data-bind="click: appendNewCat">Another runt in the litter!</button>
 
 
 
 <table class="game-window" data-bind="________">
-    <thead><tr><th>Name</th><th>Clicks</th><th>Picture</th></tr></thead>
-    <tbody data-bind="foreach: mails">
+    <thead><tr><th>The Litter</th><th>Pick up</th></tr></thead>
+    <tbody data-bind="foreach: cats">
         <tr>
-            <td data-bind="text: name"></td>
-            <td data-bind="text: clicks"></td>
-            <td data-bind="image: catpic"></td>
+            <td><input data-bind="value: name"/></td>
+            <td data-bind=""
+            <td><button data-bind="click: goToCat"></button></td>
         </tr>
     </tbody>
 </table>

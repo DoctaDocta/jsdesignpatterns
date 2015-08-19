@@ -4,8 +4,10 @@
 
 }
 
-#game-window {
+.game-window {
 	background-color: #5d4037;
+	margin: 10px;
+	padding: 5px;
 }
 
 body {
