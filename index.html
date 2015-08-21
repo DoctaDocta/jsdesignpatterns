@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="catstyler.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="catstyler.css">
 	<script type='text/javascript' src='knockout-3.3.0.js'></script>
 	<!-- reference V2 with view model -->
 	<script type="text/javascript" src="catclickerv2.js"></script>
@@ -12,21 +14,40 @@
 <!-- View -->
 
 <!-- Cats -->
-<h2 id="title">A wonderful cat-alogue</h2>
+<div class="container">
+	<div class="row">
+		<h2 class="title col-md-12">A wonderful cat-alogue</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		        <ul data-bind="foreach: cats" class="table nav navbar-nav">
+		            <li><button class="cat-button" data-bind="text: name"><span data-bind="text: score" class="badge"></span></button></li>
+		        </ul>
+		</div>
+	</div>
 
-<button data-bind="click: appendNewCat">Another runt in the litter!</button>
-
-
-
-<table class="game-window" data-bind="________">
-    <thead><tr><th>The Litter</th><th>Pick up</th></tr></thead>
-    <tbody data-bind="foreach: cats">
-        <tr>
-            <td><input data-bind="value: name"/></td>
-            <td data-bind=""
-            <td><button data-bind="click: goToCat"></button></td>
-        </tr>
-    </tbody>
-</table>
+	<div class="row">
+		<div class"col-md-1">
+		</div>
+		<div class="jumbotron col-md-10">
+			<div class="name_score" data-bind="with: cats">
+				<h3 data-bind="text: name"></h3>
+				<h4 data-bind="value: score"></h4>
+			</div>
+			<img src="cat-pictures/catpic.jpg" alt="catpic" width="100%" height="100%">
+		</div>
+		<div class"col-md-1">
+		</div>
+	</div>
+	<div class="row">
+		<div class"col-md-2">
+		</div>
+		<div class"col-md-3">
+			<h3><input type="submit" class="btn btn-warning" data-bind="value: newName" data-bind="click: appendNewCat"></input></h3>
+		</div>
+		<div class"col-md-7">
+		</div>
+	</div>
+</div>
 
 </body>
